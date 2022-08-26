@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {ArrowRightIcon} from 'react-native-heroicons/outline';
+import RestaurantCard from './RestaurantCard';
 
 const FeaturedRow = ({id, title, description}) => {
   return (
@@ -13,9 +14,49 @@ const FeaturedRow = ({id, title, description}) => {
       <Text className='text-xs text-gray-500 px-4'>{description}</Text>
 
       <ScrollView
-      
+        horizontal
+        contentContainerStyle={{
+          paddingHorizontal: 15,
+        }}
+        showsHorizontalScrollIndicator={false}
+        className='pt-4'
       >
-
+        <RestaurantCard 
+          id={123}
+          imgUrl='https://picsum.photos/600'
+          title='Yo! Sushi'
+          rating={4.5}
+          genre='Japanese'
+          address='123 Main St'
+          short_description='This is a test description'
+          dishes={[]}
+          long={20}
+          lat={0}
+        />
+        <RestaurantCard 
+          id={123}
+          imgUrl='https://picsum.photos/600'
+          title='Yo! Sushi'
+          rating={4.5}
+          genre='Japanese'
+          address='123 Main St'
+          short_description='This is a test description'
+          dishes={[]}
+          long={20}
+          lat={0}
+        />
+        <RestaurantCard 
+          id={123}
+          imgUrl='https://picsum.photos/600'
+          title='Yo! Sushi'
+          rating={4.5}
+          genre='Japanese'
+          address='123 Main St'
+          short_description='This is a test description'
+          dishes={[]}
+          long={20}
+          lat={0}
+        />
       </ScrollView>
     </View>
   );
