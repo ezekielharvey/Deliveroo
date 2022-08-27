@@ -25,7 +25,7 @@ const HomeScreen = () => {
         <View className="flex-row pb-3 items-center mx-4 space-x-2 ">
           <Image
             source={{
-              uri: 'https://picsum.photos/400',
+              uri: 'https://picsum.photos/600',
             }}
             className="h-7 w-7 p-4 rounded-full"
           />
