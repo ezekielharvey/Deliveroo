@@ -10,6 +10,7 @@ import {
 import Categories from '../components/Categories';
 import FeaturedRow from '../components/FeaturedRow';
 import sanityClient from '../sanity';
+import colors from '../config/colors';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -39,7 +40,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView className="bg-white">
         {/* Header */}
-        <View className="flex-row pb-3 items-center mx-4 space-x-2 ">
+        <View className="flex-row pb-3 items-center mx-4 space-x-2">
           <Image
             source={{
               uri: 'https://picsum.photos/600',
@@ -53,17 +54,17 @@ const HomeScreen = () => {
             </Text>
             <Text className="font-bold text-xl">
               Current Location
-              <ChevronDownIcon size={20} color="#00CCBB" />
+              <ChevronDownIcon size={20} color={colors.primary} />
             </Text>
           </View>
-          <UserIcon size={35} color="#00CCBB" />
+          <UserIcon size={35} color={colors.primary} />
         </View>
         <View className='flex-row items-center space-x-2 pb-2 mx-4'>
           <View className='flex-row flex-1 space-x-2 bg-gray-200 p-3'>
             <MagnifyingGlassIcon color='gray' size={20} />
-            <TextInput placeholder='Restaurants and Cuisines' keyboardType='default' placeholderTextColor={'gray'}/>
+            <TextInput placeholder='Building Materials and Design' keyboardType='default' placeholderTextColor={'gray'}/>
           </View>
-          <AdjustmentsVerticalIcon color='#00CCBB' /> 
+          <AdjustmentsVerticalIcon color={colors.primary} /> 
         </View>
           <ScrollView className='bg-gray-100'
             contentContainerStyle={{

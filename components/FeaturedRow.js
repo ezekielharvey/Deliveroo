@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {ArrowRightIcon} from 'react-native-heroicons/outline';
+import colors from '../config/colors';
 import sanityClient from '../sanity';
 import RestaurantCard from './RestaurantCard';
 
@@ -35,7 +36,7 @@ const FeaturedRow = ({id, title, description}) => {
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
         <Text className="font-bold text-lg">{title}</Text>
-        <ArrowRightIcon color="#00CCBB" />
+        <ArrowRightIcon color={colors.primary} />
       </View>
 
       <Text className="text-xs text-gray-500 px-4">{description}</Text>
